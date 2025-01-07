@@ -48,5 +48,15 @@ let atletas = [
 
 let todosAtletas = atletas.map(atleta => new Atleta(atleta.nome, atleta.notas));
 
+let numeroAtletas = todosAtletas.length;
+
+//let notasComputadas = todosAtletas.atleta.notas.slice(1,4)
+
 console.log("Saída:\n");
-console.log(todosAtletas);
+
+console.log("Número de atletas: " + numeroAtletas + "\n")
+
+for (let i = 0; i < numeroAtletas; i++) {
+    let atletaAtual = todosAtletas[i];
+   console.log(`Atleta: ${atletaAtual.nome}`);
+}
