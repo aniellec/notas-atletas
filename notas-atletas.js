@@ -16,3 +16,17 @@ let atletas = [
    notas: [10, 10, 10, 9, 9.5]
  }
 ];
+
+new class Atleta {
+    construct (nome, notas){
+        this.nome = nome;
+        this.notas = notas;
+     }
+
+     media(notas){
+         return this.notas.reduce((soma, nota) => soma + nota, 0) / this.notas.length;
+         console.log();
+     }
+}
+
+
