@@ -1,3 +1,32 @@
+// Definição da classe 
+//class Usuario {
+    // classe vazia
+//}
+
+// Digite seu código abaixo
+//let usuario1 = new Usuario();
+//let usuario2 = new Usuario();
+
+
+
+
+
+
+class Atleta {
+    constructor (nome, notas){
+        this.nome = nome;
+        this.notas = notas;
+     }
+
+    sort(){
+        return this.notas.sort();
+    }
+
+     media(){
+         return this.notas.reduce((soma, nota) => soma + nota, 0) / this.notas.length;
+     }
+}
+
 let atletas = [
  {
    nome: "Cesar Abascal",
@@ -17,16 +46,7 @@ let atletas = [
  }
 ];
 
-new class Atleta {
-    construct (nome, notas){
-        this.nome = nome;
-        this.notas = notas;
-     }
+let todosAtletas = atletas.map(atleta => new Atleta(atleta.nome, atleta.notas));
 
-     media(notas){
-         return this.notas.reduce((soma, nota) => soma + nota, 0) / this.notas.length;
-         console.log();
-     }
-}
-
-
+console.log("Saída:\n");
+console.log(todosAtletas);
