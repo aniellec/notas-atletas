@@ -58,5 +58,6 @@ console.log("Número de atletas: " + numeroAtletas + "\n")
 
 for (let i = 0; i < numeroAtletas; i++) {
     let atletaAtual = todosAtletas[i];
-   console.log(`Atleta: ${atletaAtual.nome}`);
+   console.log(`\nAtleta: ${atletaAtual.nome}`);
+   console.log(`Notas Obtidas: ${atletaAtual.notas}`);
 }
