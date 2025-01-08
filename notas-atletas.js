@@ -1,29 +1,7 @@
-// Definição da classe 
-//class Usuario {
-    // classe vazia
-//}
-
-// Digite seu código abaixo
-//let usuario1 = new Usuario();
-//let usuario2 = new Usuario();
-
-
-
-
-
-
 class Atleta {
     constructor (nome, notas){
         this.nome = nome;
         this.notas = notas;
-     }
-
-    sort(){
-        return this.notas.sort();
-    }
-
-     media(){
-         return this.notas.reduce((soma, nota) => soma + nota, 0) / this.notas.length;
      }
 }
 
@@ -50,7 +28,9 @@ let todosAtletas = atletas.map(atleta => new Atleta(atleta.nome, atleta.notas));
 
 let numeroAtletas = todosAtletas.length;
 
-//let notasComputadas = todosAtletas.atleta.notas.slice(1,4)
+function sortfunction(a, b){
+  return (a - b);
+}
 
 console.log("Saída:\n");
 
@@ -60,4 +40,8 @@ for (let i = 0; i < numeroAtletas; i++) {
     let atletaAtual = todosAtletas[i];
    console.log(`\nAtleta: ${atletaAtual.nome}`);
    console.log(`Notas Obtidas: ${atletaAtual.notas}`);
+   let notasValidas = atletaAtual.notas.sort(sortfunction).slice(1,4);
+   console.log(`Notas Válidas: ${notasValidas}`);
+   let mediaValida = notasValidas.reduce((soma, nota) => soma + nota, 0) / 3;
+   console.log(`Média Válida: ${mediaValida}`);
 }
